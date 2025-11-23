@@ -14,8 +14,11 @@ public class PlayerMove : MonoBehaviour
     [SerializeField, Range(0, 1)] private float decayRate;
     [SerializeField] private float groundCheckRadius = 0.2f;
     public Transform groundCheck;
+    public Transform headCheck;
+
     public LayerMask groundLayer;
     private bool isGrounded;
+    private bool hitHead;
 
 
     // Update is called once per frame
@@ -28,6 +31,8 @@ public class PlayerMove : MonoBehaviour
         //Jump Code -----------------------------------
         //Checks for grounding every frame
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+        //Checks for a headbump underneath a platform
+        hitHead = Physics2D.OverlapCircle(headCheck.position, groundCheckRadius, groundLayer);
 
         //Handles jump input
         if (isGrounded && Input.GetButtonDown("Jump"))
@@ -37,6 +42,11 @@ public class PlayerMove : MonoBehaviour
         }
 
         decayDelay += Time.deltaTime; //Decay delay timer
+
+        if(hitHead) //If hit head start descent instantly
+        {
+            decayDelay = jumpHeight;
+        }
     }
 
     private void FixedUpdate()

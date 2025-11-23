@@ -256,7 +256,7 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
---- !u!1001 &633179280
+--- !u!1001 &756386597
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -266,11 +266,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2962317487467838224, guid: 0618ad78e863d834b977f746375817f8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.4553776
+      value: -1.66
       objectReference: {fileID: 0}
     - target: {fileID: 2962317487467838224, guid: 0618ad78e863d834b977f746375817f8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.022883294
+      value: 0.14
       objectReference: {fileID: 0}
     - target: {fileID: 2962317487467838224, guid: 0618ad78e863d834b977f746375817f8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -313,7 +313,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0618ad78e863d834b977f746375817f8, type: 3}
---- !u!1001 &1721484148
+--- !u!1001 &904832122
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -323,11 +323,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2962317487467838224, guid: 0618ad78e863d834b977f746375817f8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.43
+      value: 4.291581
       objectReference: {fileID: 0}
     - target: {fileID: 2962317487467838224, guid: 0618ad78e863d834b977f746375817f8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.57
+      value: -0.8418891
       objectReference: {fileID: 0}
     - target: {fileID: 2962317487467838224, guid: 0618ad78e863d834b977f746375817f8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -380,7 +380,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2998277546476071621, guid: 7595175f748abe14b83cccb2ed9102da, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 1.89
       objectReference: {fileID: 0}
     - target: {fileID: 2998277546476071621, guid: 7595175f748abe14b83cccb2ed9102da, type: 3}
       propertyPath: m_LocalPosition.y
@@ -495,5 +495,5 @@ SceneRoots:
   - {fileID: 608906126}
   - {fileID: 547593299365567712}
   - {fileID: 2230245325731882449}
-  - {fileID: 633179280}
-  - {fileID: 1721484148}
+  - {fileID: 756386597}
+  - {fileID: 904832122}
