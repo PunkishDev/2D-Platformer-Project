@@ -308,18 +308,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 5215532386799334862, guid: 7595175f748abe14b83cccb2ed9102da, type: 3}
-      propertyPath: decayRate
-      value: 0.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 6981572972848165691, guid: 7595175f748abe14b83cccb2ed9102da, type: 3}
-      propertyPath: m_Mass
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6981572972848165691, guid: 7595175f748abe14b83cccb2ed9102da, type: 3}
-      propertyPath: m_GravityScale
-      value: 10
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
