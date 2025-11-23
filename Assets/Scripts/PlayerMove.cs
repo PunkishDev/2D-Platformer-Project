@@ -26,7 +26,7 @@ public class PlayerMove : MonoBehaviour
     {
 
         //Getting horizontal input for movement
-        input = new Vector2(Input.GetAxisRaw("Horizontal"), input.y); //Setting y to input.y since itll modify on another line for jump input
+        input = new Vector2(Input.GetAxis("Horizontal"), input.y); //Setting y to input.y since itll modify on another line for jump input
         
         //Jump Code -----------------------------------
         //Checks for grounding every frame
