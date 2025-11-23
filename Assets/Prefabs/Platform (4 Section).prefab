@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1526121225871580325}
   - component: {fileID: 1179196899461823313}
   - component: {fileID: 7171608472262501449}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Platforms_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -135,7 +135,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.0625, y: 1.0625}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!1 &6198699562580534695
 GameObject:
@@ -148,7 +148,7 @@ GameObject:
   - component: {fileID: 1417104524317901997}
   - component: {fileID: 7121181684827292323}
   - component: {fileID: 487454635506286897}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Platforms_2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -272,7 +272,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.125, y: 1.0625}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!1 &6597235524688809362
 GameObject:
@@ -285,7 +285,7 @@ GameObject:
   - component: {fileID: 6531677433049794613}
   - component: {fileID: 5462148236310945943}
   - component: {fileID: 7237822708887325244}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Platforms_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -409,7 +409,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.125, y: 1.0625}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!1 &8125216515684879564
 GameObject:
@@ -420,7 +420,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2962317487467838224}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Platform (4 Section)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -457,7 +457,7 @@ GameObject:
   - component: {fileID: 2174975771596405709}
   - component: {fileID: 5423001190445959110}
   - component: {fileID: 5999754608110500721}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Platforms_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -581,5 +581,5 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.0625, y: 1.0625}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0

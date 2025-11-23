@@ -7,15 +7,47 @@ public class PlayerMove : MonoBehaviour
 
     private Vector2 input = Vector2.zero;
 
+    //Jump feature variables
+    [SerializeField] private float jumpForce; //Velocity the player jumps at
+    [SerializeField] private float jumpHeight = 0.6f; //Amount of time before the player stops moving up
+    private float decayDelay = 0f;
+    [SerializeField, Range(0, 1)] private float decayRate;
+    [SerializeField] private float groundCheckRadius = 0.2f;
+    public Transform groundCheck;
+    public LayerMask groundLayer;
+    private bool isGrounded;
+
+
     // Update is called once per frame
     void Update()
     {
+
         //Getting horizontal input for movement
         input = new Vector2(Input.GetAxisRaw("Horizontal"), input.y); //Setting y to input.y since itll modify on another line for jump input
+        
+        //Jump Code -----------------------------------
+        //Checks for grounding every frame
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+
+        //Handles jump input
+        if (isGrounded && Input.GetButtonDown("Jump"))
+        {
+            input = new Vector2(input.x, 1);
+            decayDelay = 0f; //Resets the delay timer for the jump smoothing
+        }
+
+        decayDelay += Time.deltaTime; //Decay delay timer
     }
 
     private void FixedUpdate()
     {
-        rb.linearVelocity = input * moveSpeed;
+        if (decayDelay >= jumpHeight)
+        {
+            rb.linearVelocity = new Vector2(input.x * moveSpeed, rb.linearVelocity.y - decayRate); //Smoothes the jump at its peak leading to the descent 
+        }else
+        {
+            rb.linearVelocity = new Vector2(input.x * moveSpeed, input.y * jumpForce); //Seperates the movement code into horizontal and vertical components
+        }
+
     }
 }
