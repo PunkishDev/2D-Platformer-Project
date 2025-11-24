@@ -19,6 +19,9 @@ public class PlayerMove : MonoBehaviour
     public LayerMask groundLayer;
     private bool isGrounded;
     private bool hitHead;
+    //Used for double jump
+    private bool canJump;
+    private int numJumps = 0;
 
 
     // Update is called once per frame
@@ -34,11 +37,20 @@ public class PlayerMove : MonoBehaviour
         //Checks for a headbump underneath a platform
         hitHead = Physics2D.OverlapCircle(headCheck.position, groundCheckRadius, groundLayer);
 
+        if (isGrounded || numJumps % 2 != 0)
+        {
+            canJump = true;
+        } else
+        {
+            canJump = false;
+        }
+
         //Handles jump input
-        if (isGrounded && Input.GetButtonDown("Jump"))
+        if (canJump && Input.GetButtonDown("Jump"))
         {
             input = new Vector2(input.x, 1);
             decayDelay = 0f; //Resets the delay timer for the jump smoothing
+            numJumps += 1;
         }
 
         decayDelay += Time.deltaTime; //Decay delay timer
