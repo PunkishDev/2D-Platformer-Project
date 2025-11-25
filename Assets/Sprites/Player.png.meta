@@ -137,7 +137,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Player_0
+      name: idle_0
       rect:
         serializedVersion: 2
         x: 0
@@ -159,7 +159,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_1
+      name: run_1
       rect:
         serializedVersion: 2
         x: 0
@@ -181,7 +181,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_2
+      name: idle_1
       rect:
         serializedVersion: 2
         x: 17
@@ -203,7 +203,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_3
+      name: run_2
       rect:
         serializedVersion: 2
         x: 17
@@ -225,7 +225,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_4
+      name: run_0
       rect:
         serializedVersion: 2
         x: 34
@@ -247,7 +247,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_5
+      name: run_3
       rect:
         serializedVersion: 2
         x: 34
@@ -269,7 +269,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_6
+      name: jump_0
       rect:
         serializedVersion: 2
         x: 0
@@ -291,7 +291,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_7
+      name: jump_1
       rect:
         serializedVersion: 2
         x: 17
@@ -313,7 +313,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_8
+      name: jump_2
       rect:
         serializedVersion: 2
         x: 34
@@ -348,15 +348,15 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Player_0: -2311659948842064771
-      Player_1: 7364682651488144517
-      Player_2: -6287787046888575383
-      Player_3: -1182821291677670348
-      Player_4: -4709456396536258026
-      Player_5: -4529042392078601758
-      Player_6: -7446026091647042388
-      Player_7: 5938012242645255967
-      Player_8: -4245738604243887485
+      idle_0: -2311659948842064771
+      idle_1: -6287787046888575383
+      jump_0: -7446026091647042388
+      jump_1: 5938012242645255967
+      jump_2: -4245738604243887485
+      run_0: -4709456396536258026
+      run_1: 7364682651488144517
+      run_2: -1182821291677670348
+      run_3: -4529042392078601758
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

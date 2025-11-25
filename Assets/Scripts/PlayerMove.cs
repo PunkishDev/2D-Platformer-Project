@@ -22,6 +22,15 @@ public class PlayerMove : MonoBehaviour
     //Used for double jump
     private bool canJump;
     private int numJumps = 0;
+    
+    // for animations
+    private Animator animator;
+
+
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
 
 
     // Update is called once per frame
@@ -59,6 +68,8 @@ public class PlayerMove : MonoBehaviour
         {
             decayDelay = jumpHeight;
         }
+
+        SetAnimation();
     }
 
     private void FixedUpdate()
@@ -71,5 +82,32 @@ public class PlayerMove : MonoBehaviour
             rb.linearVelocity = new Vector2(input.x * moveSpeed, input.y * jumpForce); //Seperates the movement code into horizontal and vertical components
         }
 
+    }
+
+    private void SetAnimation()
+    {
+        if (isGrounded) // is on ground
+        {
+            if (rb.linearVelocityX == 0) // is moving
+            {
+                animator.Play("Player_idle"); // play idle if yes
+            }
+            else
+            {
+                animator.Play("Player_run"); // run if no
+            }
+        }
+        else // not grounded
+        {
+            if(rb.linearVelocityY > 0) // going up
+            {
+                animator.Play("Player_Jump"); // jump animation if yes
+            }
+            else
+            {
+                animator.Play("Player_fall"); // falling if no
+            }
+        }
+        
     }
 }
