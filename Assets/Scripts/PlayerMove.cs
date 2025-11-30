@@ -1,4 +1,6 @@
 using UnityEngine;
+using System.Collections;
+using System;
 
 public class PlayerMove : MonoBehaviour
 {
@@ -76,8 +78,8 @@ public class PlayerMove : MonoBehaviour
     private void FixedUpdate()
     {
         if (decayDelay >= jumpHeight)
-        {
-            rb.linearVelocity = new Vector2(input.x * moveSpeed, rb.linearVelocity.y - decayRate); //Smoothes the jump at its peak leading to the descent 
+        { 
+            rb.linearVelocity = new Vector2(input.x * moveSpeed, rb.linearVelocity.y - decayRate); //Smoothes the jump at its peak leading to the descent
         }else
         {
             rb.linearVelocity = new Vector2(input.x * moveSpeed, input.y * jumpForce); //Seperates the movement code into horizontal and vertical components
