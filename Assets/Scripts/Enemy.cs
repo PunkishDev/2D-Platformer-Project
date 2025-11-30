@@ -35,5 +35,18 @@ public class Enemy : MonoBehaviour
             transform.position = new Vector2(leftBoundary, transform.position.y);
             direction = 1;
         }
+
+        SetRotation();
+    }
+
+    private void SetRotation()
+    {
+        if (direction > 0)
+        {
+            transform.rotation = Quaternion.Euler(0f, 180f, 0f);
+        }else
+        {
+            transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+        }
     }
 }
