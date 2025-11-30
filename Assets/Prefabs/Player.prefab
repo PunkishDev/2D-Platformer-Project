@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 5215532386799334862}
   - component: {fileID: 6820551957248599294}
   - component: {fileID: 4769980893277454490}
+  - component: {fileID: -3531963735101920922}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -236,6 +237,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-3531963735101920922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4823059560686213319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c2870348a74c7840a32cbbf77dde759, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
+  health: 100
+  damageAmount: 25
 --- !u!1 &7787520646950287823
 GameObject:
   m_ObjectHideFlags: 0
