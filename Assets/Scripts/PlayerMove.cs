@@ -70,6 +70,7 @@ public class PlayerMove : MonoBehaviour
         }
 
         SetAnimation();
+        SetRotation();
     }
 
     private void FixedUpdate()
@@ -109,5 +110,15 @@ public class PlayerMove : MonoBehaviour
             }
         }
         
+    }
+
+    private void SetRotation()
+    {
+        if (rb.linearVelocityX > 0)
+        {
+            transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
+        }else if (rb.linearVelocityX < 0) {
+            transform.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
+        }
     }
 }
