@@ -1,13 +1,14 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
     // Starting health value for the Player
     public int health = 100;
 
-    // Amount of damage the Player takes when hit
-    public int damageAmount = 25;
+    //UI Management stuff
+    public Slider healthBar;
 
     // Reference to the Player's SpriteRenderer (used for flashing red)
     private SpriteRenderer spriteRenderer;
@@ -16,12 +17,14 @@ public class PlayerHealth : MonoBehaviour
     {
         // Get the SpriteRenderer component attached to the Player
         spriteRenderer = GetComponent<SpriteRenderer>();
+        healthBar.value = health;
     }
 
     // Method to reduce health when damage is taken
-    public void TakeDamage()
+    public void TakeDamage(int damageAmount)
     {
         health -= damageAmount; // subtract damage amount
+        healthBar.value = health;
         StartCoroutine(BlinkRed()); // briefly flash red
 
         // If health reaches zero or below, call Die()
