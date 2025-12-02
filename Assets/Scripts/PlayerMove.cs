@@ -29,6 +29,9 @@ public class PlayerMove : MonoBehaviour
     private Animator animator;
 
 
+    //coin count
+    public int coins;
+
     private void Start()
     {
         animator = GetComponent<Animator>();
