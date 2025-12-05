@@ -6,6 +6,7 @@ public class PlayerHealth : MonoBehaviour
 {
     // Starting health value for the Player
     public int health = 100;
+    public SoundManager sm;
 
     //UI Management stuff
     public Slider healthBar;
@@ -18,11 +19,13 @@ public class PlayerHealth : MonoBehaviour
         // Get the SpriteRenderer component attached to the Player
         spriteRenderer = GetComponent<SpriteRenderer>();
         healthBar.value = health;
+        sm = FindFirstObjectByType<SoundManager>();
     }
 
     // Method to reduce health when damage is taken
     public void TakeDamage(int damageAmount)
     {
+        sm.PlaySound("Hurt");
         health -= damageAmount; // subtract damage amount
         healthBar.value = health;
         StartCoroutine(BlinkRed()); // briefly flash red

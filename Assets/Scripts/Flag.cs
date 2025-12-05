@@ -8,6 +8,7 @@ public class Flag : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
+            FindFirstObjectByType<SoundManager>().PlaySound("Win");
             Time.timeScale = 0;
             winUI.SetActive(true);
         }

@@ -28,6 +28,9 @@ public class PlayerMove : MonoBehaviour
     // for animations
     private Animator animator;
 
+    //Sound stuff
+    public SoundManager sm;
+
 
     //coin count
     public int coins;
@@ -35,6 +38,7 @@ public class PlayerMove : MonoBehaviour
     private void Start()
     {
         animator = GetComponent<Animator>();
+        sm = FindFirstObjectByType<SoundManager>();
     }
 
 
@@ -62,6 +66,7 @@ public class PlayerMove : MonoBehaviour
         //Handles jump input
         if (canJump && Input.GetButtonDown("Jump"))
         {
+            sm.PlaySound("Jump");
             input = new Vector2(input.x, 1);
             decayDelay = 0f; //Resets the delay timer for the jump smoothing
             numJumps += 1;
