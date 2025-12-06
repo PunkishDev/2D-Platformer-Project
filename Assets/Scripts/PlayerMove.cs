@@ -131,4 +131,14 @@ public class PlayerMove : MonoBehaviour
             transform.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("BouncePad"))
+        {
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce * 3F);
+
+            sm.PlaySound("Boing");
+        }
+    }
 }
