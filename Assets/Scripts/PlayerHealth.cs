@@ -48,6 +48,6 @@ public class PlayerHealth : MonoBehaviour
     // Reload the scene when the Player dies
     private void Die()
     {
-        SceneManager.LoadScene("Main");
+        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
     }
 }
