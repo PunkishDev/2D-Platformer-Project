@@ -10,6 +10,7 @@ public class PlayerHealth : MonoBehaviour
 
     //UI Management stuff
     public Slider healthBar;
+    public GameObject DeadUI;
 
     // Reference to the Player's SpriteRenderer (used for flashing red)
     private SpriteRenderer spriteRenderer;
@@ -48,6 +49,9 @@ public class PlayerHealth : MonoBehaviour
     // Reload the scene when the Player dies
     private void Die()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
+        //UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
+        FindFirstObjectByType<SoundManager>().PlaySound("Hurt");
+        Time.timeScale = 0;
+        DeadUI.SetActive(true);
     }
 }
