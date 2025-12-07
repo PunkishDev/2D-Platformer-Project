@@ -5,6 +5,22 @@ public class MenuManager : MonoBehaviour
 {
     public GameObject PauseMenu, DeathMenu, LevelSelectMenu;
 
+    private bool paused = false;
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if(paused)
+            {
+                Resume();
+            }else
+            {
+                Pause();
+            }
+        }
+    }
+
     private void PauseTime()
     {
         Time.timeScale = 0f;
@@ -15,15 +31,31 @@ public class MenuManager : MonoBehaviour
     }
 
     //Menu Methods
+    private void HideAllMenus()
+    {
+        PauseMenu.SetActive(false);
+        DeathMenu.SetActive(false);
+        LevelSelectMenu.SetActive(false);
+    }
     public void Resume()
     {
         ResumeTime();
-        PauseMenu.SetActive(false);
+        HideAllMenus();
+        paused = false;
     }
     public void Pause()
     {
         PauseTime();
         PauseMenu.SetActive(true);
+        paused = true;
+    }
+    public void ShowLevelSelect()
+    {
+        LevelSelectMenu.SetActive(true);
+    }
+    public void HideLevelSelect()
+    {
+        LevelSelectMenu.SetActive(false);
     }
     public void Die()
     {
@@ -34,5 +66,15 @@ public class MenuManager : MonoBehaviour
     {
         ResumeTime();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+    public void Quit()
+    {
+        Application.Quit();
+    }
+
+    //Level Select Method
+    public void SelectLevel(int index)
+    {
+        SceneManager.LoadScene(index);
     }
 }

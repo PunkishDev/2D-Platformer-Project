@@ -34,7 +34,7 @@ public class PlayerHealth : MonoBehaviour
         // If health reaches zero or below, call Die()
         if (health <= 0)
         {
-            Die();
+            FindFirstObjectByType<MenuManager>().Die();
         }
     }
 
@@ -44,14 +44,5 @@ public class PlayerHealth : MonoBehaviour
         spriteRenderer.color = Color.red;
         yield return new WaitForSeconds(0.1f);
         spriteRenderer.color = Color.white;
-    }
-
-    // Reload the scene when the Player dies
-    private void Die()
-    {
-        //UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
-        FindFirstObjectByType<SoundManager>().PlaySound("Hurt");
-        Time.timeScale = 0;
-        DeadUI.SetActive(true);
     }
 }
