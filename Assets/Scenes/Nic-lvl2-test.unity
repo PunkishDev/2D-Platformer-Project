@@ -281,7 +281,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2299904788690461800, guid: 98d474aca88c06b4893b635b1797ccbf, type: 3}
       propertyPath: m_text
-      value: YOU SUCK!
+      value: YOU DIED!
       objectReference: {fileID: 0}
     - target: {fileID: 4045089130579071794, guid: 98d474aca88c06b4893b635b1797ccbf, type: 3}
       propertyPath: m_Pivot.x
