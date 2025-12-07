@@ -75,6 +75,7 @@ public class MenuManager : MonoBehaviour
     //Level Select Method
     public void SelectLevel(int index)
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene(index);
     }
 }

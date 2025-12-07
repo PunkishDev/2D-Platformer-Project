@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 3565921472947976687}
   - component: {fileID: 6324576086981901525}
   - component: {fileID: 9205739030246431689}
-  - component: {fileID: 4914529183492848838}
   m_Layer: 5
   m_Name: ResetButton
   m_TagString: Untagged
@@ -122,7 +121,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4914529183492848838}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: RestartGame, Assembly-CSharp
         m_MethodName: LoadCurrentScene
         m_Mode: 1
@@ -134,18 +133,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &4914529183492848838
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1252696356916300987}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9220d3640a1853e43b7b027e96301b7f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RestartGame
 --- !u!1 &6593857206660980562
 GameObject:
   m_ObjectHideFlags: 0
@@ -299,7 +286,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &3251884624561439824
 RectTransform:
   m_ObjectHideFlags: 0
