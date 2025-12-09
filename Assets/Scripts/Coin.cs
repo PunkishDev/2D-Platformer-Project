@@ -15,7 +15,7 @@ public class Coin : MonoBehaviour
             SoundManager sm = FindFirstObjectByType<SoundManager>();
             sm.PlaySound("Coin");
             PlayerMove player = collision.gameObject.GetComponent<PlayerMove>();
-            player.coins = +1;
+            player.coins++;
             coinText.text = player.coins.ToString();
             Destroy(gameObject);
         }
