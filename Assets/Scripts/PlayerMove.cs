@@ -1,6 +1,7 @@
-using UnityEngine;
-using System.Collections;
 using System;
+using System.Collections;
+using TMPro;
+using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
@@ -35,6 +36,11 @@ public class PlayerMove : MonoBehaviour
     //coin count
     public int coins;
 
+    private void Awake()
+    {
+        coins = PlayerPrefs.GetInt("Coins");
+        GameObject.FindWithTag("CoinText").GetComponent<TextMeshProUGUI>().text = coins.ToString();
+    }
     private void Start()
     {
         animator = GetComponent<Animator>();
