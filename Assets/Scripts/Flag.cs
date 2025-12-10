@@ -9,6 +9,7 @@ public class Flag : MonoBehaviour
         if(collision.gameObject.tag == "Player")
         {
             FindFirstObjectByType<SoundManager>().PlaySound("Win");
+            PlayerPrefs.SetInt("Coins", FindFirstObjectByType<PlayerMove>().coins);
             Time.timeScale = 0;
             winUI.SetActive(true);
         }
