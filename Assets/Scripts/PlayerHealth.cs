@@ -26,14 +26,22 @@ public class PlayerHealth : MonoBehaviour
     // Method to reduce health when damage is taken
     public void TakeDamage(int damageAmount)
     {
-        sm.PlaySound("Hurt");
+        
         health -= damageAmount; // subtract damage amount
-        healthBar.value = health;
+        if (health <= 25 && health > 0)
+        {
+            sm.PlaySound("Hurt3");
+        }
+        else if (health <= 50 && health > 25) { sm.PlaySound("Hurt2"); }
+        else if (health > 50) { sm.PlaySound("Hurt1"); }
+        else { sm.PlaySound("Death"); }
+            healthBar.value = health;
         StartCoroutine(BlinkRed()); // briefly flash red
 
         // If health reaches zero or below, call Die()
         if (health <= 0)
         {
+            
             FindFirstObjectByType<MenuManager>().Die();
         }
     }

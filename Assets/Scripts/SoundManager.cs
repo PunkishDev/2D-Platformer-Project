@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
+
     //List of special sound class gameObjects
     public Sound[] sounds;
 

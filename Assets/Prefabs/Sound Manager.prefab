@@ -54,25 +54,73 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: Jump
-    clip: {fileID: 8300000, guid: 56654eae78c142449a4f707ec60097bc, type: 3}
-    volume: 1
-    randomPitch: 1
-    minPitch: 0.507
-    maxPitch: 1
+    clip: {fileID: 8300000, guid: 30bf8c1b4fde41144bf04c19de33d79c, type: 3}
+    volume: 0.75
+    randomPitch: 0
+    minPitch: 1
+    maxPitch: 0
     loop: 0
     source: {fileID: 0}
   - name: Coin
-    clip: {fileID: 8300000, guid: 7e5ff90447daeec4b9b8cfb4189fad00, type: 3}
+    clip: {fileID: 8300000, guid: ff72cbcc23f4f654db0faa1b4e99c056, type: 3}
     volume: 1
-    randomPitch: 1
-    minPitch: 0.24
-    maxPitch: 0.742
+    randomPitch: 0
+    minPitch: 1
+    maxPitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Win
-    clip: {fileID: 8300000, guid: 8c163a09bfbf8d341b56420656657668, type: 3}
+    clip: {fileID: 8300000, guid: 9840ec99ae87d3449b1a9f26a5f54ddd, type: 3}
+    volume: 0.75
+    randomPitch: 0
+    minPitch: 1
+    maxPitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Hurt1
+    clip: {fileID: 8300000, guid: 18b22680fe6084242a59ce2719e7d9db, type: 3}
     volume: 1
     randomPitch: 0
+    minPitch: 1
+    maxPitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Hurt2
+    clip: {fileID: 8300000, guid: 0414a6080025497449c8fef88570c65c, type: 3}
+    volume: 1
+    randomPitch: 0
+    minPitch: 1
+    maxPitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Hurt3
+    clip: {fileID: 8300000, guid: 1d87d14d813e7dd4bb6110854999b906, type: 3}
+    volume: 1
+    randomPitch: 0
+    minPitch: 1
+    maxPitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Boing
+    clip: {fileID: 8300000, guid: 078170220485308459c1382bf908ed2d, type: 3}
+    volume: 1
+    randomPitch: 0
+    minPitch: 1
+    maxPitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Death
+    clip: {fileID: 8300000, guid: 3ec2938387447614b97c55432eaa999f, type: 3}
+    volume: 1
+    randomPitch: 0
+    minPitch: 1
+    maxPitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Key
+    clip: {fileID: 8300000, guid: d4b508e5feb61c44ab6216352bee0ba0, type: 3}
+    volume: 1
+    randomPitch: 1
     minPitch: 1
     maxPitch: 0
     loop: 0
