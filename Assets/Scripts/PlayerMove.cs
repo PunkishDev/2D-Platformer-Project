@@ -146,5 +146,10 @@ public class PlayerMove : MonoBehaviour
 
             sm.PlaySound("Boing");
         }
+        else if (collision.CompareTag("Banana"))
+        {
+            moveSpeed += 1.75f;
+            Destroy(collision.gameObject);
+        }
     }
 }
